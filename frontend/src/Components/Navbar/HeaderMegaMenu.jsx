@@ -18,10 +18,11 @@ import {
 } from '../../redux/slices/User';
 import classes from './HeaderMegaMenu.module.css';
 
-const navLinks = [
+  const navLinks = [
   { to: '/', label: 'Home' },
   { to: '/profile', label: 'Profile' },
-];
+  { to: '/url/shortener', label: 'Url Shortener' },
+  ];
 
 export function HeaderMegaMenu() {
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
@@ -40,6 +41,8 @@ export function HeaderMegaMenu() {
       {link.label}
     </NavLink>
   ));
+
+
 
   return (
     <Box pb={0}>
