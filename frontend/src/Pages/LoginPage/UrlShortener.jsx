@@ -9,7 +9,8 @@ export default function UrlShortener() {
  
    return (
        <Container size={"xs"}>
-           {response?<UrlResponse response = {response}/>:<UrlForm setResponse={setResponse}/>}
+           {response?<UrlResponse setResponse={setResponse} response = {response}/>:<UrlForm setResponse={setResponse}/>}
        </Container>
+       
    )
 }
